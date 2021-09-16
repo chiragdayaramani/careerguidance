@@ -25,4 +25,6 @@ def signup(request):
     }
     return render(request,'registration/signup.html',context)
 
-
+@login_required
+def after10(request):
+    return render(request, 'after10.html')
