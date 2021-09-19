@@ -1,3 +1,4 @@
+from core.models import After10
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
@@ -27,4 +28,8 @@ def signup(request):
 
 @login_required
 def after10(request):
-    return render(request, 'after10.html')
+    questions=After10.objects.all()
+    context={
+        'questions':questions
+    }
+    return render(request, 'after10.html',context)
