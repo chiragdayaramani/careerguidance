@@ -32,11 +32,12 @@
 					{% for question in questions %}
 				  <tr>
 					<td><big>{{question.question}}</big></td>
-					<td align="center"><input type="radio" name="R1" value="0" /></td>
-					<td align="center"><input type="radio" name="R1" value="1" /></td>
-					<td align="center"><input type="radio" name="R1" value="2" /></td>
-					<td align="center"><input type="radio" name="R1" value="3" /></td>
-					<td align="center"><input type="radio" name="R1" value="4" /></td>
+					
+					<td align="center"><input type="radio" name="{{question.id }}" value="0" /></td>
+					<td align="center"><input type="radio" name="{{question.id }}" value="2" /></td>
+					<td align="center"><input type="radio" name="{{question.id }}" value="1" /></td>
+					<td align="center"><input type="radio" name="{{question.id }}" value="3" /></td>
+					<td align="center"><input type="radio" name="{{question.id }}" value="4" /></td>
 				  </tr>
 				  {% endfor %}
 				</tbody>
