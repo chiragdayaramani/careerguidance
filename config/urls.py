@@ -16,8 +16,11 @@ Including another URLconf
 from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
+from core import views as core_views
+
 
 urlpatterns = [
+    path('',core_views.home),
     path('admin/', admin.site.urls),
     path('core/',include('core.urls')),
 ]

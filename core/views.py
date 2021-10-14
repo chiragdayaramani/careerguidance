@@ -1,3 +1,4 @@
+from core.forms import SignUpForm
 from core.models import After10, After12Arts, After12Commerce, After12Science
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import UserCreationForm
@@ -15,12 +16,12 @@ def home(request):
 
 def signup(request):
     if request.method=='POST':
-        form=UserCreationForm(request.POST)
+        form=SignUpForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('home')
     else:
-        form=  UserCreationForm()
+        form=  SignUpForm()
     context = {
         'form':form,
     }

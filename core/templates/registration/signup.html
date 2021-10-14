@@ -3,10 +3,10 @@
 {% load crispy_forms_tags %}   
 {% block body_content %}
     <div class="row justify-content-center pt-5">
-        <div class="col-6">
+        <div class="col-9">
             <div class="card">
                 <div class="card-body">
-                    <h2 style="text-align: center;">Register</h2>
+                    <h2 style="text-align: center;">Register Here</h2>
                     <form action="" method="post" novalidate>
                         {% csrf_token %}
                         {{ form|crispy }}
